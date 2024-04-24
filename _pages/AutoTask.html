@@ -1,0 +1,221 @@
+---
+layout: projects
+permalink: /AutoTask
+title: "AutoTask"
+author_profile: true
+---
+
+
+<h1 class="paper-title">
+  AutoTask: Executing Arbitrary Voice Commands by Exploring and Learning from
+  Mobile GUI
+</h1>
+
+<div class="publication-authors">
+  <span class="author-block">
+    <a href="https://bowenbryanwang.github.io/">Bowen Wang</a><sup>*</sup>,</span>
+  <span class="author-block"> Lihang Pan<sup>*</sup>,</span>
+  <span class="author-block"> Chun Yu,</span>
+  <span class="author-block"> Yuxuan Chen,</span>
+  <span class="author-block"> Xiangyu Zhang,</span>
+  <span class="author-block"> Yuanchun Shi,</span>
+</div>
+<div class="publication-authors">
+  <span class="author-block">Tsinghua University</span>
+</div>
+<div class="publication-authors">
+  <div class="publication-links">
+    <!-- PDF Link. -->
+    <span class="link-block">
+      <a href="./assets/pubs/AutoTask.pdf" class="external-link button is-normal is-rounded is-dark">
+        <span class="icon">
+          <i class="fas fa-file-pdf"></i>
+        </span>
+        <span>Paper</span>
+      </a>
+    </span>
+    <span class="link-block">
+      <a href="https://arxiv.org/abs/2312.16062" class="external-link button is-normal is-rounded is-dark">
+        <span class="icon">
+          <i class="ai ai-arxiv"></i>
+        </span>
+        <span>arXiv</span>
+      </a>
+    </span>
+    <!-- Video Link.
+    <span class="link-block">
+      <a href="" class="external-link button is-normal is-rounded is-dark">
+        <span class="icon">
+          <i class="fab fa-youtube"></i>
+        </span>
+        <span>Video</span>
+      </a>
+    </span> -->
+    <!-- Code Link. -->
+    <span class="link-block">
+      <a href="https://github.com/BowenBryanWang/AutoTask" class="external-link button is-normal is-rounded is-dark">
+        <span class="icon">
+          <i class="fab fa-github"></i>
+        </span>
+        <span>Code</span>
+      </a>
+    </span>
+  </div>
+</div>
+<img src="images/AutoTask/teaser.png" class="paper-teaser" alt="AutoTask demo teaser" />
+<h2 class="paper-abstract">Abstract</h2>
+<p class="paper-text">
+  Voice interfaces have gained increasing importance as they enable hands-free
+  and eyes-free interaction with digital devices. However, the inherent
+  complexity in constructing effective voice interfaces has limited their
+  coverage to only a small fraction of GUI applications and tasks.
+</p>
+<p class="paper-text">
+  This paper presents <span class="dnerf">AutoTask</span>, a voice command
+  interface (VCI) capable of automating any task within any mobile application
+  without requiring any configuration or modification from developers or
+  end-users. AutoTask's primary challenge lies in the absence of prior
+  knowledge, as it needs to accomplish an unknown task (i.e., user command)
+  within an unknown environment (i.e., GUI).
+  <span class="dnerf">AutoTask</span> employs two strategies to address this
+  challenge. (1) trial and error: AutoTask explores the GUI to attempt potential
+  operation sequences and recovers from errors through backtrack; (2) learning
+  from the environment: AutoTask accumulates experiences during exploration and
+  summarizing correct knowledge from them. We implemented AutoTask on Android
+  devices and conducted an evaluation study. The experimental results proved the
+  feasibility of AutoTask.
+</p>
+<h2 class="paper-abstract">System</h2>
+<div class="paper-2column">
+  <div style="width:50%;margin: 5pt;padding: 5pt;">
+    <h2>
+      Learning from the GUI
+    </h2>
+    <img src="images/AutoTask/learning.png" alt="AutoTask Learning from the GUI" />
+    <p>AutoTask’s execution experience for the command "Import Contacts from contacts.vcf". (1) AutoTask clicks the
+      "Add" button on Page 1. (2) AutoTask detects an incorrect history operation based on the content of the new page
+      (i.e., Page 2) and backtracks to Page 1, as indicated by the orange arrow. (3) AutoTask determines that the task
+      remains incomplete and selects the "Fix & Manage" button. (4) AutoTask clicks "Import from file" on the new page.
+      (5) AutoTask selects "contacts.vcf" following the user command. It is a parameter of the intent. (6) AutoTask
+      concludes that the task is completed and finishes the execution.
+    </p>
+  </div>
+  <div style="width:50%;margin: 5pt;padding: 5pt;">
+    <h2>
+      Understanding the GUI
+    </h2>
+    <img src="images/AutoTask/understanding.png" alt="AutoTask Learning from the GUI" />
+    <p>An example result of AutoTask understanding the GUI. (A) The operation sequence for enabling SIM lock. We omit
+      some operations, such as scrolling the screen. AutoTask learns environmental knowledge (Type-1) from the sequence.
+      (B) The HTML representation of Page 1. We omit some GUI elements. (C) The HTML representation after AutoTask
+      understanding the GUI when executing the command "enable app pinning". The understanding result corresponds to the
+      "targets" property of the "Security & privacy" button.
+    </p>
+  </div>
+</div>
+<div class="paper-2column">
+  <div style="width:50%;margin: 5pt;padding: 5pt;">
+    <h2>
+      Deciding
+    </h2>
+    <p>In the deciding module, AutoTask calculates the most possible operation in the current GUI to complete the user
+      command. Subsequently, AutoTask assigns scores to these operations:
+    <p style="text-align: center;"><img src="images/AutoTask/math.png" width="60%" /></p>
+    <ul>
+      <li> <strong>Basic Score (1.0 - 8.0)</strong>, which is calculated by adding the following two components
+        together:
+        <ul>
+          <li> <strong>Likert scale (1.0 - 7.0)</strong>. We employ an LLM to assess the relevance of the operations to
+            the user’s
+            command.
+            We use a 7-point Likert scale, where 1 indicates extremely low relevance, and 7 denotes very high
+            relevance.</li>
+          <li>
+            <strong>Tie-breaking score (0.0 - 1.0)</strong>. We calculate the semantic similarities between operations
+            and tasks as the
+            tie-breaking scores.
+          </li>
+        </ul>
+      </li>
+
+      <li> Penalty factor(0.0-positive infinity).
+        <ul>
+          <li> <strong>Repetition penalty</strong>, used to penalize operations that have already appeared in the
+            executed operation
+            sequence.
+            The repetition penalty is fixed at 10.</li>
+          <li> <strong>Backtracking penalty</strong>, used to penalize operations considered incorrect by the checking
+            module. The
+            backtracking penalty is initialized at 0 and can be updated by the checking module.
+            AutoTask selects the operation with the highest score as the next to be executed. If the current operation
+            is
+            text input, AutoTask utilizes an LLM to calculate the text content. </li>
+        </ul>
+      </li>
+    </ul>
+    </p>
+  </div>
+  <div style="width:50%;margin: 5pt;padding: 5pt;">
+    <h2>
+      Checking
+    </h2>
+    <p>After AutoTask performs GUI operations, the checking
+      module conducts two checks on the completed operation sequence: completeness and correctness.</p>
+    <ul>
+      <li><strong>Completeness Check</strong>. The checking module employs an LLM to determine whether the current task
+        is completed. This check is also performed during the backtracking process to address "overshoot" issues, where
+        unnecessary operations are executed after task completion. </li>
+      <li><strong>Correctness Check</strong>. If a task is not completed, AutoTask checks whether the last step
+        currently being executed is correct, i.e., whether AutoTask can continue to fulfill the user’s instruction. The
+        essence of a correctness check is checking the correctness of the deciding module with more experiences and
+        knowledge accumulated from the GUI. </li>
+    </ul>
+  </div>
+</div>
+</p>
+<h2 class="paper-abstract">Results</h2>
+<p class="paper-text">We validated the capabilities of AutoTask on the PixelHelp and UGIF datasets. We made adjustments
+  to the commands in the datasets, including:
+  (1) Changing the tone from inquiry to command. We modified the instructions to align them with how users
+  typically interact with voice assistants. For example, we changed "how to turn off WiFi" to "turn off WiFi".
+  (2) Supplementing missing parameters. Some commands lacked parameters and were not executable. We added parameters to
+  these instructions.
+</p>
+<p class="paper-text">We introduced four metrics to evaluate AutoTask:
+<ul>
+  <li>
+    Success rate, i.e., the ratio of the number of successfully completed tasks to the total number of tasks.</li>
+  <li>The step accuracy of a task, i.e., the ratio of the number of correct steps to the minimum number of steps
+    required to complete the task. The correct steps are defined as the longest subsequence (instead of substring) of
+    the actually executed steps that satisfy the following criterion: the minimum steps needed to complete the task
+    start with the subsequence. For completed tasks, this metric is always 1. For tasks that were not successfully
+    completed, this metric indicates the proximity of AutoTask to successful completion.
+  </li>
+  <li>The step redundancy rate of a task, i.e., the ratio of the difference between the number of executed steps and the
+    number of correct steps to the number of executed steps. This metric evaluates the system’s efficiency. Tasks that
+    succeeded with a step redundancy rate of 0 are referred to as "tasks completed without redundancy".
+  </li>
+  <li>Non-redundant completion rate, i.e., the ratio of the number of tasks completed without redundancy to the total
+    number of tasks.
+  </li>
+</ul>
+<img src="images/AutoTask/results.png" alt="results" style="margin-bottom:10pt;margin-top: 10pt;"/>
+<p class="paper-text">AutoTask performs significantly better than the baseline when no knowledge is accumulated, and
+  knowledge accumulation further improves its performance. AutoTask addresses the special case in the voice assistant
+  domain of accomplishing unknown tasks in an unknown environment, a problem pattern that applies to many other similar
+  scenarios. We hope that AutoTask can inspire future work to apply general artificial intelligence to everyday tasks
+  with little effort from the developers or the end users.
+</p>
+</p>
+<div>
+  <h2 class="paper-abstract">BibTeX</h2>
+  <pre style="background-color: #f0f0f0; padding: 10pt;"><code style="font-size: 12pt;">@misc{pan2023autotask,
+    title={AutoTask: Executing Arbitrary Voice Commands by Exploring and Learning from Mobile GUI}, 
+    author={Lihang Pan and Bowen Wang and Chun Yu and Yuxuan Chen and Xiangyu Zhang and Yuanchun Shi},
+    year={2023},
+    eprint={2312.16062},
+    archivePrefix={arXiv},
+    primaryClass={cs.HC}
+}
+</code></pre>
+</div>
