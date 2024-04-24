@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Homepage"
+title: ""
 excerpt: ""
 author_profile: true
 redirect_from:
@@ -25,7 +25,7 @@ redirect_from:
 </p>
 <div class="announcement">
   📣 &nbsp; I am seeking a Ph.D. position in HCI, starting from Fall
-  2024. If you are interested in my research or would like to
+  1.    If you are interested in my research or would like to
   collaborate, please feel free to reach out. Download my <a href="./assets/CV.pdf">CV</a> here.
 </div>
 
