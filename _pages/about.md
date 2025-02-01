@@ -11,8 +11,8 @@ redirect_from:
 <p><span class="anchor" id="about-me"></span></p>
 
 <p>
-  My name is <a class="red-label">Bowen 'Bryan' Wang</a> and I am a senior
-  undergrad in <a href="https://www.tsinghua.edu.cn/">Tsinghua University</a> focusing on Human-Computer
+  My name is <a class="red-label">Zemin Yang</a> and I am a senior
+  undergrad in <a href="https://www.tsinghua.edu.cn/">China University of Geoscience</a> focusing on Human-Computer
   Interaction (HCI) at <a href="https://pi.cs.tsinghua.edu.cn/">Pervasive Computing HCI Group (PCG)</a>. My passion
   lies in
   refining and revolutionizing the way humans and devices
