@@ -11,25 +11,29 @@ redirect_from:
 <p><span class="anchor" id="about-me"></span></p>
 
 <p>
-  My name is <a class="red-label">Zemin Yang</a> and I am a senior
-  undergrad in <a href="https://www.tsinghua.edu.cn/">China University of Geoscience</a> focusing on Human-Computer
-  Interaction (HCI) at <a href="https://pi.cs.tsinghua.edu.cn/">Pervasive Computing HCI Group (PCG)</a>. My passion
-  lies in
-  refining and revolutionizing the way humans and devices
-  communicate. I'm especially intrigued by the nuances in the
-  semantics of natural interactions between humans, devices, and AI.
+  My name is <a class="red-label">Zemin Yang</a> and I am a master student in <a href="https://www.shanghaitech.edu.cn/">ShanghaiTech University</a> focusing on 3D Computer Vision and Embodied AI at <a href="https://4dvlab.github.io/">4DV Lab</a>. My passion lies in refining and revolutionizing the interaction behavior in Embodied AI. I'm particularly interested in in the interaction between humans and Embodied AI Agents.
 </p>
 <p>
-  My goal 📌 is to help human interacts with interface, device and data utilizing AI in a more efficient and natural
-  way.
+  My goal 📌 is to help human interacts with robots, devices and data utilizing AI in a more efficient and natural way.
 </p>
-<div class="announcement">
+
+<p>
+  
+</p>
+<p>
+  
+</p>
+<p>
+  
+</p>
+
+<!-- <div class="announcement">
   📣 &nbsp; I am seeking a Ph.D. position in HCI, starting from Fall
   1.    If you are interested in my research or would like to
   collaborate, please feel free to reach out. Download my <a href="./assets/CV.pdf">CV</a> here.
-</div>
+</div> -->
 
-<div class="research-wrapper">
+<!-- <div class="research-wrapper">
   <div class="venn-wrapper">
     <div class="my-venn">
       <div class="overlap">
@@ -75,7 +79,6 @@ redirect_from:
       I'm keen on emerging areas like Multimodal Interaction and
       Context-aware Computing, targeting intuitive and smart
       interactions.
-
       </p>
     </div>
     <div class="text-wrapper-unsee">
@@ -89,18 +92,76 @@ redirect_from:
           Interaction</li>
         <li>Human-AI Interaction</li>
       </ul>
-      <!-- <a
-                    href="https://scholar.google.com/citations?user=DhtAFkwAAAAJ"
-                    ><img
-                      src="https://img.shields.io/endpoint?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSaltyp0rridge%2Fbowenwang.github.io%40google-scholar-stats%2Fgs_data_shieldsio.json&amp;logo=Google%20Scholar&amp;labelColor=f6f6f6&amp;color=9cf&amp;style=flat&amp;label=citations" /></a
-                  >). -->
       </p>
     </div>
   </div>
-</div>
+</div> -->
+
 <h1 id="-publications">📝 Publications</h1>
+<p style="color: #3f446a; margin: 0%; font-weight: 350;">* indicates equal contributions</p>
 
 <div class="paper-box">
+  <div class="paper-box-image">
+    <div>
+      <div class="badge-coming">Coming Soon</div>
+      <img src="images/EasyHOI.png" alt="sym" width="100%" />
+    </div>
+  </div>
+  <div class="paper-box-text">
+    <p>
+      <a style="text-decoration: underline;" href="https://lym29.github.io/EasyHOI-page/">EasyHOI: Unleashing the Power of Large Models for Reconstructing Hand-Object Interactions in the Wild</a>
+    </p>
+    <p>
+      Yumeng Liu, Xiaoxiao Long, <b>Zemin Yang</b>, Yuan Liu, Marc Habermann, Christian Theobalt, Yuexin Ma, Wenping Wang
+    </p>
+    <p>This paper explores reconstructing hand-object interactions from a single-view image. We develop a pipeline to estimate hand pose and object shape using large models and apply a prior-guided optimization to adjust the hand pose, ensuring it meets 3D physical constraints while aligning with the 2D image. </p>
+    <a href="./assets/pubs/EasyHOI.pdf" class="pdf-link" target="_blank">PDF</a>
+    <a href="https://arxiv.org/abs/2411.14280" class="paper-box-link" target="_blank">Paper</a>
+    <a href="https://github.com/lym29/EasyHOI" class="paper-box-link" target="_blank">Github <i
+        class="fab fa-github"></i> </a>
+  </div>
+</div>
+
+<div class="paper-box">
+  <div class="paper-box-image">
+    <div>
+      <div class="badge-coming">Coming Soon</div>
+      <img src="images/HUMOR.png" alt="sym" width="100%" />
+    </div>
+  </div>
+  <div class="paper-box-text">
+    <p>
+      <a style="text-decoration: underline;">HUMOR: Towards Building A World Model of Human Motion in Dynamic Social Scenes</a>
+    </p>
+    <p>
+      Anonymous Authors <b>(As 4th author)</b>
+    </p>
+  </div>
+</div>
+
+<div class="paper-box">
+  <div class="paper-box-image">
+    <div>
+      <div class="badge-IMWUT">AAAI 2025</div>
+      <img src="images/UniDemoire.png" alt="sym" width="100%" />
+    </div>
+  </div>
+  <div class="paper-box-text">
+    <p>
+      <a href="https://yizhifengyeyzm.github.io/UniDemoire-page/" style="text-decoration: underline;">UniDemoiré: Towards Universal Image Demoiréing with Data Generation and Synthesis</a>
+    </p>
+    <p>
+      <b>Zemin Yang*</b>, Yujing Sun*, Xidong Peng, Siu Ming Yiu, Yuexin Ma
+    </p>
+    <p>This paper proposes a universal image demoiréing solution, UniDemoiré, which has superior generalization capability. Notably, we propose innovative and effective data generation and synthesis methods that can automatically provide vast high-quality moiré images to train a universal demoiréing model. </p>
+    <a href="./assets/pubs/UniDemoire.pdf" class="pdf-link" target="_blank">PDF</a>
+    <a href="https://yizhifengyeyzm.github.io/UniDemoire-page/" class="paper-box-link" target="_blank">Project Page</a>
+    <a href="https://github.com/4DVLab/UniDemoire" class="paper-box-link" target="_blank">Github <i class="fab fa-github"></i> </a>
+  </div>
+</div>
+
+
+<!-- <div class="paper-box">
   <div class="paper-box-image">
     <div>
       <div class="badge-coming">Coming Soon</div>
@@ -112,7 +173,6 @@ redirect_from:
       <a style="text-decoration: underline;" href="/AutoTask">AutoTask: Executing Arbitrary Voice Commands by Exploring
         and Learning from Mobile GUI</a>
     </p>
-
     <p>
       <b>Bowen Wang*</b>, Lihang Pan*, Chun Yu, Yuxuan Chen,
       Xiangyu Zhang, Yuanchun Shi
@@ -126,6 +186,7 @@ redirect_from:
         class="fab fa-github"></i> </a>
   </div>
 </div>
+
 <div class="paper-box">
   <div class="paper-box-image">
     <div>
@@ -144,6 +205,7 @@ redirect_from:
     </p>
   </div>
 </div>
+
 <div class="paper-box">
   <div class="paper-box-image">
     <div>
@@ -157,13 +219,7 @@ redirect_from:
         Manager: Semantic Model Generation and
         Run-time Support for Reconstructing Ubiquitous User
         Interfaces of Mobile Services</a>
-      <!-- <a
-                    href="https://scholar.google.com/citations?user=DhtAFkwAAAAJ:u5HHmVD_uO8C"
-                    ><img
-                      src="https://img.shields.io/endpoint?url=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FSaltyp0rridge%2Fbowenwang.github.io%40google-scholar-stats%2Fgs_data_shieldsio.json&amp;logo=Google%20Scholar&amp;labelColor=f6f6f6&amp;color=9cf&amp;style=flat&amp;label=citations" /></a
-                  > -->
     </p>
-
     <p>
       Tian Huang, Chun Yu, Weinan Shi, <b>Bowen Wang</b>,
       David Yang, Yihao Zhu, Zhaoheng Li, Yuanchun Shi
@@ -174,20 +230,41 @@ redirect_from:
     <a href="./assets/pubs/imwut22e-sub6665-cam-i26.pdf" class="pdf-link" target="_blank">PDF</a>
     <a href="https://dl.acm.org/doi/10.1145/3610929" class="paper-box-link" target="_blank">Paper</a>
   </div>
-</div>
+</div> -->
 
 
 <h1 id="-honors-and-awards">🎖 Honors and Awards</h1>
 
 <ul>
   <li>
-    <em class="red-label">09/2023</em> Research and Innovation Scholarship <b>(Top
+    <a class="red-label">06/2024</a> Outstanding Graduate Award <b>(Top 10%)</b>
+  </li>
+
+  <li>
+    <a class="red-label">06/2023</a> 1st Award in the 13th Mathercup Mathematical Contest in Modeling
+  </li>
+
+  <li>
+    <a class="red-label">02/2023</a> Meritorious Winner in the American Collegiate Mathematical Contest in Modeling
+  </li>
+
+  <li>
+    <a class="red-label">11/2022</a> Ranking 99 in the CCF Big Data and Computational Intelligence Competition <b>(Top 4%)</b>
+  </li>
+
+  <li>
+    <a class="red-label">10/2022</a> 1st Award in the China Undergraduate Mathematical Contest in Modeling at Hubei Region
+  </li>
+
+  <!-- <li>
+    <a class="red-label">09/2023</a> Research and Innovation Scholarship <b>(Top
       1%)</b>
   </li>
+
   <li>
-    <em class="red-label">05/2023</em> 2rd Award of Challenge Cup at Tsinghua University <b>(Top
+    <a class="red-label">05/2023</a> 2rd Award of Challenge Cup at Tsinghua University <b>(Top
       10%)</b>
-  </li>
+  </li> -->
 
 
 </ul>
@@ -201,8 +278,19 @@ redirect_from:
       <img style="width: 15pt; height: 15pt; margin: 5pt;" src="images/svg/a.svg" />
       <div>
         <p style="color: black; margin: 0%; font-weight: 350;">
-          Bachelor of Engineering (B.Eng.) 2024 (Expected)</p>
-        <p style="color: rgba(0,0,0,.6); font-size: 10pt; margin: 0%;"> Tsinghua University</p>
+          <a class="red-label">2024 - Now </a> Master of Computer Science and Technology</p>
+        <p style="color: rgba(0,0,0,.6); font-size: 10pt; margin: 0%;"> ShanghaiTech University</p>
+      </div>
+    </div>
+  </li>
+
+  <li style="display: block;">
+    <div class="edu-box">
+      <img style="width: 15pt; height: 15pt; margin: 5pt;" src="images/svg/a.svg" />
+      <div>
+        <p style="color: black; margin: 0%; font-weight: 350;">
+          <a class="red-label">2019 - 2024</a> Bachelor of Data Science and Big Data Technology </p>
+        <p style="color: rgba(0,0,0,.6); font-size: 10pt; margin: 0%;"> China University of Geoscience (Wuhan)</p>
       </div>
     </div>
   </li>
@@ -224,20 +312,40 @@ redirect_from:
             </li>
           </ul> -->
 
-<h1 id="-internships">💻 Internships</h1>
+<!-- <h1 id="-internships">💻 Internships</h1>
 
 <ul>
   <li>
-    <em class="red-label">06/2023 - Now</em>
+    <a class="red-label">06/2023 - Now</a>
     <b>Research Intern</b> at NUS-HCI group, National University of Singapore
   </li>
   <li>
-    <em class="red-label">05/2023 - Now</em>
+    <a class="red-label">05/2023 - Now</a>
     <b>Co-funder</b> of <a href="https://ai-anywhere.com/">AI-anywhere</a>
   </li>
 
   <li>
-    <em class="red-label">2021.09 - Now</em>
+    <a class="red-label">2021.09 - Now</a>
     <b>Undergraduate Research Assistant</b> at PCG group, Tsinghua University
   </li>
-</ul>
+</ul> -->
+
+<h1 id="-hobbies">🎨 Hobbies</h1>
+<p style="color: black; margin: 0%; font-weight: 350;">
+  📷 <a class="red-label" href="https://500px.com.cn/yizhifengye">Photography</a>, ⚽ Football, 🏀 Basketball, 🎮 FPS Games
+</p>
+<!-- <ul>
+  <li>
+    <p style="color: black; margin: 0%; font-weight: 350;">📷 Photography</p>
+  </li>
+  <li>
+    <p style="color: black; margin: 0%; font-weight: 350;">⚽ Football</p>
+  </li>
+  <li>
+    <p style="color: black; margin: 0%; font-weight: 350;">🏀 Basketball</p>
+  </li>
+  <li>
+    <p style="color: black; margin: 0%; font-weight: 350;">🎮 FPS Games</p>
+  </li>
+
+</ul> -->

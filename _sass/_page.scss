@@ -83,7 +83,7 @@
     margin-top: 1em;
     padding-bottom: 0.5em;
     border-bottom: 1px solid $border-color;
-    color: #ab2837;
+    color: #61658e;
   }
 
   p,
@@ -660,6 +660,13 @@ header {
   grid-column: 3 / 9;
 }
 
+.masthead__menu-item a {
+  font-family: "Google Sans", sans-serif;
+  font-weight: bold;
+  font-size: 24pt;
+  // color: black;
+}
+
 .paper-title {
   font-family: "Google Sans", sans-serif;
   font-weight: bold;
@@ -737,7 +744,7 @@ header {
 
 .red-label {
   display: inline;
-  background-color: #fee7e9;
+  background-color: #eaeeff;
   padding: 3px 5px;
   border-radius: 5px;
   margin-right: 5px;
@@ -811,7 +818,7 @@ header {
   padding-left: 8px;
   padding-right: 8px;
   border-radius: 5px;
-  background-color: #fee7e9;
+  background-color: #eaeaee;
 }
 .pdf-link {
   content: "\f1c1";
@@ -820,14 +827,14 @@ header {
   padding-left: 8px;
   padding-right: 8px;
   border-radius: 5px;
-  background-color: #fee7e9;
+  background-color: #eaeaee;
 }
 
 .pdf-link::after {
   font-family: "Font Awesome 5 Free";
   content: "\f1c1";
   margin-left: 4px;
-  background-color: #fee7e9;
+  background-color: #eaeaee;
 }
 
 .paper-venue {
@@ -1033,12 +1040,12 @@ section {
 
 a {
   text-decoration: none;
-  color: #be3e47;
+  color: #3f446a;
   font-weight: 400;
 }
 
 a:hover {
-  color: #be3e47;
+  color: #3f446a;
 }
 
 a:visited {
