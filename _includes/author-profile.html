@@ -34,8 +34,9 @@ endif %}
       </li>
       {% endif %} {% if author.employer %}
       <li>
-        <i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> {{
-        author.employer }}
+        <a href="https://4dvlab.github.io/"><i class="fa fa-fw fa-microscope" aria-hidden="true"></i>
+          {{author.employer }}</a
+        >
       </li>
       {% endif %} {% if author.uri %}
       <li>
@@ -44,12 +45,11 @@ endif %}
         >
       </li>
       {% endif %}
-      <li>
-        <a href="./assets/CV.pdf"
-          ><i class="fas fa-fw fa-file" aria-hidden="true"></i>
-          <strong style="color: #718af4"> Curriculum Vitae</strong></a
+      <!-- <li>
+        <a href="./assets/CV.pdf"><i class="fas fa-fw fa-file" aria-hidden="true"></i>
+          Curriculum Vitae</a
         >
-      </li>
+      </li> -->
       {% if author.email %}
       <li>
         <a href="mailto:{{ author.email }}"

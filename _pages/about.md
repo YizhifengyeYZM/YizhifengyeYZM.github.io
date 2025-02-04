@@ -103,7 +103,7 @@ redirect_from:
 <div class="paper-box">
   <div class="paper-box-image">
     <div>
-      <div class="badge-coming">Coming Soon</div>
+      <div class="badge-coming"><b>Coming Soon</b></div>
       <img src="images/EasyHOI.png" alt="sym" width="100%" />
     </div>
   </div>
@@ -125,7 +125,7 @@ redirect_from:
 <div class="paper-box">
   <div class="paper-box-image">
     <div>
-      <div class="badge-coming">Coming Soon</div>
+      <div class="badge-coming"><b>Coming Soon</b></div>
       <img src="images/HUMOR.png" alt="sym" width="100%" />
     </div>
   </div>
@@ -142,7 +142,7 @@ redirect_from:
 <div class="paper-box">
   <div class="paper-box-image">
     <div>
-      <div class="badge-IMWUT">AAAI 2025</div>
+      <div class="badge-IMWUT"><b>AAAI 2025</b></div>
       <img src="images/UniDemoire.png" alt="sym" width="100%" />
     </div>
   </div>
